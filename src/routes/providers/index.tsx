@@ -54,13 +54,13 @@ export default function Providers() {
     if (loadProviderData) {
       enqueueSnackbar({ message: `Loaded provider "${loadProviderData.loadProvider.displayName}"`, variant: "success" });
       resetLoadProvider();
-      refetchListProviders();
+      refetchListProviders().catch(console.error);
       handleMoreMenuClose();
     }
     if (unloadProviderData) {
       enqueueSnackbar({ message: `Unloaded provider "${unloadProviderData.unloadProvider.displayName}"`, variant: "success" });
       resetUnloadProvider();
-      refetchListProviders();
+      refetchListProviders().catch(console.error);
       handleMoreMenuClose();
     }
   }, [loadProviderData, unloadProviderData, enqueueSnackbar, resetLoadProvider, resetUnloadProvider, refetchListProviders]);

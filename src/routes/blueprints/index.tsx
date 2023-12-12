@@ -16,7 +16,7 @@ import { useBlueprintsQuery, useMeHasPermissionQuery } from "../../api/graphql/g
 import { useEffect } from "react";
 import { MuiMarkdown, getOverrides } from "mui-markdown";
 import { useSnackbar } from "notistack";
-import { Edit } from "@mui/icons-material";
+import { Add, Edit } from "@mui/icons-material";
 
 const MarkdownOverrides = {
   ...getOverrides(),
@@ -76,7 +76,7 @@ export default function Blueprints() {
       <Box sx={{ display: "flex", alignContent: "center", justifyContent: "space-between" }}>
         <Typography variant="h4">Blueprints</Typography>
         {createPermData?.meHasPermission && (
-          <Button href="/blueprints/create" variant="contained" color="primary">
+          <Button href="/blueprints/create" variant="contained" color="primary" startIcon={<Add />}>
             Create
           </Button>
         )}

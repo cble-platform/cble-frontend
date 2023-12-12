@@ -27,6 +27,7 @@ import DestroyDeployment from "./routes/deployments/destroy";
 import DeploymentDetails from "./routes/deployments/details";
 import Providers from "./routes/providers";
 import ProviderForm from "./routes/providers/form";
+import Users from "./routes/users";
 
 window.MonacoEnvironment = {
   getWorker(_, label) {
@@ -71,6 +72,7 @@ const router = createBrowserRouter([
           { path: "edit/:id", element: <ProviderForm action="edit" /> },
         ],
       },
+      { path: "users", children: [{ index: true, element: <Users /> }] },
     ],
     errorElement: <ErrorPage />,
   },
