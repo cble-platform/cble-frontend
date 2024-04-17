@@ -1,3 +1,6 @@
+> [!CAUTION]
+> **This repository is READ ONLY. It has been merged into a monorepo at [cble-platform/cble](https://github.com/cble-platform/cble)**
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
